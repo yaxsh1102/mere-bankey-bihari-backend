@@ -66,6 +66,7 @@ app.post('/capture-payment' , async (req, res) => {
 
 app.post('/razorpay-webhook' ,  async (req, res) => {
   try{
+      console.log('reached here') ;
     const secret = process.env.RAZORPAY_WEBHOOK_SECRET || ''
     
     const receivedSignature = req.headers['x-razorpay-signature']
